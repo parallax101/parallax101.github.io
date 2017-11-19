@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    box-sizing: border-box
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    min-height: 100px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.parallax-container {
+    width: 100%; 
+    height: 840px;
+    overflow: hidden;
+    position: absolute; 
+    transform: translate3d(0px, 0px, 0px);
+    transform-style: preserve-3d; 
+    backface-visibility: hidden;
+}
+
+.parallax-bg {
+    width: 1649px; 
+    height: 1085px; 
+    transform: translate3d(0px, 0px, 0px); 
+    transform-style: preserve-3d; 
+    backface-visibility: hidden; 
+    position: absolute; 
+    display: block; 
+    left: 0px; 
+    top: 0px;
+    background-image: url("https://demot-vertigostudio.netdna-ssl.com/parallax-one/wp-content/themes/Parallax-One/images/background1.png");  
+    background-position: top center;
+    background-size: cover;
+    left: 50%; 
+    margin-left: -825px;
+    top: 50%;
+    margin-top: -543px;
+    perspective: 2500px;
+}
+
+.parallax-move {
+    width: 1649px; 
+    height: 1085px;
+    position: absolute;
+    background-image: url("https://demot-vertigostudio.netdna-ssl.com/parallax-one/wp-content/themes/Parallax-One/images/background2.png"); 
+    background-position: top center;
+    background-size: cover;
+    transform: translate3d(0px, 0px, 0px); 
+    transform-style: preserve-3d; 
+    backface-visibility: hidden; 
+    position: absolute; 
+    display: block; 
+    left: 50%; 
+    margin-left: -825px;
+    top: 50%;
+    margin-top: -543px;
+    perspective: 500px;
+}
+
+.parallax-move::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.25);
+}
